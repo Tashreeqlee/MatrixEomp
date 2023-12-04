@@ -43,4 +43,5 @@ footer {
 /* about page css */
 .text-light {
     text-shadow: 2px 2px 4px red;
+    background-color: rgba(128, 128, 128, 0.5);
 }
