@@ -8,3 +8,8 @@
 body {
     font-family: 'Nova Square', sans-serif;
 }
+
+/* Navbar */
+img[alt="logo"] {
+    width: 20rem;
+}
