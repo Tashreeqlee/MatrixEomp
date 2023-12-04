@@ -36,6 +36,9 @@ footer {
 .btn:hover {
     background-color: #666;
 }
+.btn-align {
+    text-align: center;
+}
 
 /* about page css */
 .text-light {
