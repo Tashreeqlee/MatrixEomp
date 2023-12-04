@@ -27,7 +27,7 @@ footer {
 }
 
 .btn {
-    background-color: #333;
+    background-color: red;
     color: #fff;
     padding: 10px 10px;
     transition: background-color 0.3s ease;
