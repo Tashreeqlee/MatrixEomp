@@ -13,6 +13,7 @@ body {
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
+    text-align: center;
 }
 
 /* Navbar */
@@ -26,12 +27,17 @@ footer {
 }
 
 .btn {
-    display: inline-block;
     background-color: #333;
     color: #fff;
     padding: 10px 10px;
-    border-radius: 10px;
-    text-decoration: none;
     transition: background-color 0.3s ease;
     width: auto;
-  }
+}
+.btn:hover {
+    background-color: #666;
+}
+
+/* about page css */
+.text-light {
+    text-shadow: 2px 2px 4px red;
+}
