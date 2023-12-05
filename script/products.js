@@ -80,25 +80,26 @@ displayProducts(storedProducts);
 let inputSearch = document.querySelector('[searchinput]')
 //addevent
 inputSearch.addEventListener('keyup',()=>{
-    let SearchItem = productsHTML.filter(
+    let SearchItem = products.filter(
         prod =>{
             return prod.name.toLowerCase().includes(inputSearch.value.toLowerCase())
         }
     )
     if (SearchItem) {
-        products.innerHTML = ""
-        SearchItem.forEach(
-            item => {
-                productsListDiv.innerHTML +=
-                `<div class="col d-flex justify-content-center mb-5">
-                <div class="card" style="width: 18rem;>
-                <h3 class="card-title">${item.name}</h3>
-                <img id="img" src="${item.image}" class="img-fluid rounded-start" alt="${item.name}" style="height: 15rem">
-                <p class="card-text">Price: R${item.price}.00</p>
-                <button id="btnAddToCart" class="m-3" onclick="addToCart(${item.id})">ADD TO CART</button>
-                </div>
-                </div>`
-            }
-        )
+        // products.innerHTML = ""
+        // SearchItem.forEach(
+        //     item => {
+        //         productsListDiv.innerHTML +=
+        //         `<div class="col d-flex justify-content-center mb-5">
+        //         <div class="card" style="width: 18rem;>
+        //         <h3 class="card-title">${item.name}</h3>
+        //         <img id="img" src="${item.image}" class="img-fluid rounded-start" alt="${item.name}" style="height: 15rem">
+        //         <p class="card-text">Price: R${item.price}.00</p>
+        //         <button id="btnAddToCart" class="m-3" onclick="addToCart(${item.id})">ADD TO CART</button>
+        //         </div>
+        //         </div>`
+        //     }
+        // )
+        displayProducts(SearchItem)
     }
 })
