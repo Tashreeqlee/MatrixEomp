@@ -35,9 +35,21 @@ const products = [
     },
     {
         id: 6 , 
-        name:"BMW M3 F80 Mirror Caps",
-        image: "https://i.postimg.cc/pTg8RPHr/image-b0b017d7-66e2-4eb5-87d3-bbb78f957208.webp", 
-        price:"1000",
+        name:"Golf 7 GTI Rear Diffuser",
+        image: "https://i.postimg.cc/4xWbvpzT/image-27efa4c9-7222-43ac-8150-314305ad3558-1880x.webp", 
+        price:"1700",
+    },
+    {
+        id: 6 , 
+        name:"BMW 135i Rear Diffuser",
+        image: "https://i.postimg.cc/k5d9ct9f/image-e8f5128f-4c38-4841-89cd-434773cbba13.webp", 
+        price:"1900",
+    },
+    {
+        id: 6 , 
+        name:"BMW F30 Rear Diffuser",
+        image: "https://i.postimg.cc/JhnwK3v3/image-c814c26f-32e2-40d5-8b2a-a4ea4652d787.webp", 
+        price:"2900",
     }
 ];
 
@@ -47,14 +59,12 @@ function displayProducts(products) {
     let productsHTML = '';
     products.forEach(product => {
         productsHTML += `
-        <div class="col-md-4">
-        <div class="card mb-4 shadow-sm">
-        <div class="card-body mb-5">
+        <div class="col d-flex justify-content-center mb-5">
+        <div class="card" style="width: 18rem;>
         <h3 class="card-title">${product.name}</h3>
-        <img id="img" src="${product.image}" class="img-fluid rounded-start" alt="${product.name}">
+        <img id="img" src="${product.image}" class="img-fluid rounded-start" alt="${product.name}" style="height: 15rem">
         <p class="card-text">Price: R${product.price}.00</p>
         <button id="btnAddToCart" class="m-3" onclick="addToCart(${product.id})">ADD TO CART</button>
-        </div>
         </div>
         </div>`;
     });
@@ -65,3 +75,30 @@ function displayProducts(products) {
 localStorage.setItem('products', JSON.stringify(products));
 const storedProducts = JSON.parse(localStorage.getItem('products'));
 displayProducts(storedProducts);
+
+//search function
+let inputSearch = document.querySelector('[searchinput]')
+//addevent
+inputSearch.addEventListener('keyup',()=>{
+    let SearchItem = productsHTML.filter(
+        prod =>{
+            return prod.name.toLowerCase().includes(inputSearch.value.toLowerCase())
+        }
+    )
+    if (SearchItem) {
+        products.innerHTML = ""
+        SearchItem.forEach(
+            item => {
+                productsListDiv.innerHTML +=
+                `<div class="col d-flex justify-content-center mb-5">
+                <div class="card" style="width: 18rem;>
+                <h3 class="card-title">${item.name}</h3>
+                <img id="img" src="${item.image}" class="img-fluid rounded-start" alt="${item.name}" style="height: 15rem">
+                <p class="card-text">Price: R${item.price}.00</p>
+                <button id="btnAddToCart" class="m-3" onclick="addToCart(${item.id})">ADD TO CART</button>
+                </div>
+                </div>`
+            }
+        )
+    }
+})
