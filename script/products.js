@@ -93,14 +93,24 @@ inputSearch.addEventListener("keyup", () => {
   }
 });
 
-// Sort products by price low to high
+// sort products by price low to high
 function sortProductsByPrice() {
-  let sortedProducts = products.sort((a, b) => {
-    return parseInt(a.price) - parseInt(b.price);
-  });
-  displayProducts(sortedProducts);
-}
+    try{
+        let sortedProducts = products.sort((a, b) => {
+            return parseInt(a.price) - parseInt(b.price)//converts the price of each product to an integer using parseInt
+        })
+        displayProducts(sortedProducts);
+    }catch (e) {
 
+    }
+};
 // Add event listener to the sort button
 let sortButton = document.getElementById("sortButton");
 sortButton.addEventListener("click", sortProductsByPrice);
+
+//Add to cart button
+let cart = JSON.parse(localStorage.getItem("products"));
+
+function addToCart(productid) {
+    
+}
