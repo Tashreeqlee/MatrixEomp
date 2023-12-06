@@ -78,3 +78,9 @@ footer {
     transform: rotate(360deg);
   }
 }
+
+table tbody tr td{
+    padding: 1vw;
+    border: 1px solid black;
+}
+
