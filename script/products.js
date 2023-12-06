@@ -95,22 +95,47 @@ inputSearch.addEventListener("keyup", () => {
 
 // sort products by price low to high
 function sortProductsByPrice() {
-    try{
-        let sortedProducts = products.sort((a, b) => {
-            return parseInt(a.price) - parseInt(b.price)//converts the price of each product to an integer using parseInt
-        })
-        displayProducts(sortedProducts);
-    }catch (e) {
-
-    }
-};
+  try {
+    let sortedProducts = products.sort((a, b) => {
+      return parseInt(a.price) - parseInt(b.price); //converts the price of each product to an integer using parseInt
+    });
+    displayProducts(sortedProducts);
+  } catch (e) {}
+}
 // Add event listener to the sort button
 let sortButton = document.getElementById("sortButton");
 sortButton.addEventListener("click", sortProductsByPrice);
 
 //Add to cart button
-let cart = JSON.parse(localStorage.getItem("products"));
 
+// Display loading spinner
+function displayLoadingSpinner() {
+  const productsListDiv = document.getElementById("productsList");
+  productsListDiv.innerHTML = '<div class="spinner"></div>';
+}
+
+// Fetch products
+function fetchProducts() {
+  setTimeout(() => {
+    // used setTimeout to delay displayProducts function
+    displayProducts(products);
+  }, 1500); // delay by 1500 milliseconds
+}
+
+// Display loading spinner
+displayLoadingSpinner();
+fetchProducts();
+
+//add to cart
 function addToCart(productid) {
-    
+  const selectedProduct = products.find((product) => product.id === productid);
+  let cart = JSON.parse(localStorage.getItem("cart"));
+  if (!cart) {
+    cart = [];
+  } // Adds the product to the cart
+  cart.push(selectedProduct);
+
+  // Update in localStorage
+  localStorage.setItem("cart", JSON.stringify(cart));
+  alert("Product added to cart!");
 }
