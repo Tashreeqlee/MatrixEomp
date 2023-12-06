@@ -1,62 +1,80 @@
 *,
 *::after,
 *::before {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 ::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 body {
-    font-family: 'Nova Square', sans-serif;
-    /* background-color: lightgray; */
-    background-image: url("https://iili.io/JztmB1f.md.png");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
-    text-align: center;
+  font-family: "Nova Square", sans-serif;
+  /* background-color: lightgray; */
+  background-image: url("https://iili.io/JztmB1f.md.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
 }
 
 /* Navbar */
 img[alt="logo"] {
-    width: 20rem;
+  width: 20rem;
 }
 footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
 .btn {
-    background-color: red;
-    color: #fff;
-    padding: 10px 10px;
-    transition: background-color 0.3s ease;
-    width: auto;
+  background-color: red;
+  color: #fff;
+  padding: 10px 10px;
+  transition: background-color 0.3s ease;
+  width: auto;
 }
 .btn:hover {
-    background-color: #666;
+  background-color: #666;
 }
 .btn-align {
-    text-align: center;
+  text-align: center;
 }
 
 /* about page css */
 .text-light {
-    text-shadow: 2px 2px 4px red;
+  text-shadow: 2px 2px 4px red;
 }
 .bgcolor {
-    background-color: rgba(128, 128, 128, 0.5);
+  background-color: rgba(128, 128, 128, 0.5);
 }
 .bgcolorhome {
-    background-color: rgba(128, 128, 128, 0.5);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    padding-bottom: 10rem;
+  background-color: rgba(128, 128, 128, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding-bottom: 10rem;
 }
 
+.spinner {
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid red;
+  border-radius: 50%;
+  animation: spin 2s linear infinite;
+  margin: 0 auto;
+  width: 80px;
+  height: 80px
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
