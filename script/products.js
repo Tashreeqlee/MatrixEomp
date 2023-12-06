@@ -137,5 +137,5 @@ function addToCart(productid) {
 
   // Update in localStorage
   localStorage.setItem("cart", JSON.stringify(cart));
-  alert("Product added to cart!");
+  // alert("Product added to cart!");
 }
