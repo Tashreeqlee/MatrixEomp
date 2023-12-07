@@ -4,20 +4,20 @@ document.querySelector("#copyYear").textContent = new Date().getUTCFullYear();
 const products = [
   {
     id: 1,
-    name: "Golf 7 GTI Front Lip",
+    name: "VW Golf 7 GTI Front Lip",
     image:
       "https://i.postimg.cc/fyz3wyPw/eng-pm-FRONT-SPLITTER-VW-GOLF-VII-GTI-FACELIFT-V-1-959-1.jpg",
     price: "1500",
   },
   {
     id: 2,
-    name: "Golf 7 GTI Rear Spoiler",
+    name: "VW Golf 7 GTI Rear Spoiler",
     image: "https://i.postimg.cc/rmJmYcw7/Spoiler-Extention-0002-Layer-3.jpg",
     price: "1900",
   },
   {
     id: 3,
-    name: "Golf 7 GTI Mirror Caps",
+    name: "VW Golf 7 GTI Mirror Caps",
     image: "https://i.postimg.cc/Ss24chzW/images-7-1-600x337.jpg",
     price: "800",
   },
@@ -37,7 +37,7 @@ const products = [
   },
   {
     id: 6,
-    name: "Golf 7 GTI Rear Diffuser",
+    name: "VW Golf 7 GTI Rear Diffuser",
     image:
       "https://i.postimg.cc/4xWbvpzT/image-27efa4c9-7222-43ac-8150-314305ad3558-1880x.webp",
     price: "1700",
@@ -55,6 +55,60 @@ const products = [
     image:
       "https://i.postimg.cc/JhnwK3v3/image-c814c26f-32e2-40d5-8b2a-a4ea4652d787.webp",
     price: "2900",
+  },
+  {
+    id: 9,
+    name: "Polo Vivo 9N Front Lip",
+    image:
+      "https://i.postimg.cc/DfHNSzfW/image-88cdc232-9bec-4807-b512-7c117ce61f5d.webp",
+    price: "895",
+  },
+  {
+    id: 10,
+    name: "Polo Vivo 9N Mudflaps",
+    image: "https://i.postimg.cc/Df9C2Y5L/image-b7eb3ec0-5353-47bb-a066-99479b6da577.webp",
+    price: "250",
+  },
+  {
+    id: 11,
+    name: "VW Golf 6 GTI Mirror Caps",
+    image: "https://i.postimg.cc/d3P8Kgv0/image-24d89122-8c7c-4cbf-8e6b-48cbcc087758.webp",
+    price: "750",
+  },
+  {
+    id: 12,
+    name: "BMW Universal Kidney Style Grills",
+    image:
+      "https://i.postimg.cc/hjrSSdR7/image-be241ea2-8c70-4e08-8069-c5eac41d45ea.webp",
+    price: "900",
+  },
+  {
+    id: 13,
+    name: "Blue Spike Valve Caps",
+    image:
+      "https://i.postimg.cc/Jtwmxcbv/image-6989294a-59e5-4eec-899f-024207c40ae6.webp",
+    price: "100",
+  },
+  {
+    id: 14,
+    name: "Black Spike Valve Caps",
+    image:
+      "https://i.postimg.cc/tTNpkVr4/image-17c0aa69-cc46-4daf-8e87-61a71f3c30ae.webp",
+    price: "100",
+  },
+  {
+    id: 15,
+    name: "Red Spike Valve Caps",
+    image:
+      "https://i.postimg.cc/NMHQHzXm/image-7a7cbafb-8e3c-4016-9c31-df0fa5c50faf.webp",
+    price: "100",
+  },
+  {
+    id: 16,
+    name: "Silver Spike Valve Caps",
+    image:
+      "https://i.postimg.cc/5yJWFNbW/image-f2410874-311c-40e2-87a4-9d59d446daa9.webp",
+    price: "100",
   },
 ];
 
