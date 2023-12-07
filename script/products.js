@@ -106,7 +106,6 @@ function sortProductsByPrice() {
 let sortButton = document.getElementById("sortButton");
 sortButton.addEventListener("click", sortProductsByPrice);
 
-//Add to cart button
 
 // Display loading spinner
 function displayLoadingSpinner() {
@@ -137,5 +136,22 @@ function addToCart(productid) {
 
   // Update in localStorage
   localStorage.setItem("cart", JSON.stringify(cart));
-  // alert("Product added to cart!");
+  alert('You have successfully added the item to cart')
 }
+
+//delete button
+function deleteProduct(id) {
+  const index = checkoutData.findIndex((item) => item.id === id);
+  checkoutData.splice(index, 1);
+  
+  // Update local storage
+  localStorage.setItem("cart", JSON.stringify(checkoutData));
+  displayData();
+}
+
+checkoutWrapper.addEventListener("click", (event) => {
+  if (event.target.dataset.delete) {
+    const productId = event.target.dataset.delete;
+    deleteProduct(productId);
+  }
+});
