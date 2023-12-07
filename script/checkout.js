@@ -16,7 +16,11 @@ let checkoutData = JSON.parse(localStorage.getItem("cart"));
 function displayData() {
   checkoutWrapper.innerHTML = "";
   let totalAmount = 0;
+  let addedProducts = [];
+
   checkoutData.forEach((item) => {
+
+    if (!addedProducts.includes(item.id)) {
     checkoutWrapper.innerHTML += `
         <thead>
         <tr>
@@ -29,6 +33,8 @@ function displayData() {
         </thead>
         `;
     totalAmount += +item.price * item.quantity;
+    addedProducts.push(item.id);
+    }
   });
   document.getElementById("totalAmount").textContent = `R${totalAmount}.00`;
 }
