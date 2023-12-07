@@ -35,6 +35,7 @@ footer {
   padding: 10px 10px;
   transition: background-color 0.3s ease;
   width: auto;
+  margin-bottom: 1rem;
 }
 .btn:hover {
   background-color: #666;
@@ -90,4 +91,10 @@ table tbody tr td{
   max-width: 1170px;
   margin: auto auto;
   padding: 0;
+}
+
+/*TABLE STYLING*/
+#Admintable {
+  width: 100%;
+  margin-bottom: 5rem;
 }

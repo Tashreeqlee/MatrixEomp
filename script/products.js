@@ -43,14 +43,14 @@ const products = [
     price: "1700",
   },
   {
-    id: 6,
+    id: 7,
     name: "BMW 135i Rear Diffuser",
     image:
       "https://i.postimg.cc/k5d9ct9f/image-e8f5128f-4c38-4841-89cd-434773cbba13.webp",
     price: "1900",
   },
   {
-    id: 6,
+    id: 8,
     name: "BMW F30 Rear Diffuser",
     image:
       "https://i.postimg.cc/JhnwK3v3/image-c814c26f-32e2-40d5-8b2a-a4ea4652d787.webp",

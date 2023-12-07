@@ -1,124 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
 
     <!-- Custom Styling-->
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style.css" />
 
     <!-- Google fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nova+Square&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nova+Square&display=swap"
+      rel="stylesheet"
+    />
 
-    <link rel="shortcut icon" href="https://i.postimg.cc/3JrMZ0Yt/Screenshot-2023-12-04-094920.png" type="image/x-icon">
-    
+    <link
+      rel="shortcut icon"
+      href="https://i.postimg.cc/3JrMZ0Yt/Screenshot-2023-12-04-094920.png"
+      type="image/x-icon"
+    />
+
     <title>Admin</title>
-</head>
-<body>
+  </head>
+  <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="../index.html">
-            <img src="https://i.postimg.cc/hvqyv6PC/Screenshot-2023-12-04-094938.png" href="../index.html" loading="lazy" class="img-fluid" alt="logo">
-          </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link text-dark" href="../index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-dark" href="./about.html">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-dark" href="./products.html">Products</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-dark" href="./checkout.html">Checkout</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-dark" href="./admin.html">Admin</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-dark" href="./contact.html">Contact</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-
-      <!-- Main -->
-      <main class="container-fluid">
-        <div class="row">
-            <div class="bgcolor">
-                <h1 class="text-light">Admin</h1>
-            </div>
-        </div>
-        <div class="row">
-          <table>
-              <thead>
-                  <tr>
-                      <th>Product Name</th>
-                      <th>Image</th>
-                      <th>Price</th>
-                      <th>Quantity</th>
-                  </tr>
-              </thead>
-              <tbody admin-products>
-              </tbody>
-          </table>
-      </div>
-      <div class="col">
-        <button class="btn btn-success me-2" id="addProducts">
-          Add new products
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../index.html">
+          <img
+            src="https://i.postimg.cc/hvqyv6PC/Screenshot-2023-12-04-094938.png"
+            href="../index.html"
+            loading="lazy"
+            class="img-fluid"
+            alt="logo"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
         </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="../index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="./about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="./products.html">Products</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="./checkout.html">Checkout</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="./admin.html">Admin</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="./contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
       </div>
-      <div class="modal" tabindex="-1" role="dialog">
-        <div class="modal-dialog" role="document">
+    </nav>
+
+    <!-- Main -->
+    <main class="container-fluid">
+      <div class="row">
+        <div class="bgcolor">
+          <h1 class="text-light">Admin</h1>
+        </div>
+      </div>
+      <div class="container">
+        <!--ADDED A BUTTON FOR THE MODAL-->
+        <div class="addbtn">
+          <button onclick="addProductModal.show()" class="btn btn-primary">
+            Add Item
+          </button>
+        </div>
+        <table id="Admintable" class="table">
+          <thead>
+            <tr>
+              <th>id</th>
+              <th>Name</th>
+              <th>Image</th>
+              <th>Price</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+
+      <!--Modal-->
+      <div id="modal" class="modal">
+        <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title">Modal title</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
+              <h2 class="modal-title">Add Item</h2>
             </div>
             <div class="modal-body">
-              <input data-inputP>
-              <input data-inputN>
-              <input data-inputpR>
-              <input data-inputI>
+              <form>
+                <div class="mb-3">
+                  <label for="productId" class="form-label">Id:</label>
+                  <input type="text" class="form-control" id="productId" />
+                </div>
+                <div class="mb-3">
+                  <label for="nameItem" class="form-label">Name:</label>
+                  <input type="text" class="form-control" id="nameItem" />
+                </div>
+                <div class="mb-3">
+                  <label for="imageItem" class="form-label">Image:</label>
+                  <input type="text" class="form-control" id="imageItem" />
+                </div>
+                <div class="mb-3">
+                  <label for="priceItem" class="form-label">Price:</label>
+                  <input type="text" class="form-control" id="priceItem" />
+                </div>
+              </form>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-primary">Save changes</button>
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button
+                type="button"
+                class="btn btn-primary"
+                onclick="addProduct()"
+              >
+                Add
+              </button>
+              <button
+                type="button"
+                class="btn btn-secondary"
+                onclick="closeModal()"
+              >
+                Cancel
+              </button>
             </div>
           </div>
         </div>
       </div>
     </main>
 
-
-
-
-
-
-       <!-- Footer -->
-       <footer class="container-fluid m-0 p-0 bg-secondary fixed-bottom" >
-        <div class="text-center">
-            <p class="lead"> Matrix Performance &copy; <span id="copyYear"></span>
-            </p>
-        </div>
-      </footer>
+    <!-- Footer -->
+    <footer class="container-fluid m-0 p-0 bg-secondary fixed-bottom">
+      <div class="text-center">
+        <p class="lead">
+          Matrix Performance &copy; <span id="copyYear"></span>
+        </p>
+      </div>
+    </footer>
 
     <!-- Bootstrap Script -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
     <!-- Javascript -->
     <script src="../script/admin.js"></script>
-</body>
+  </body>
 </html>
