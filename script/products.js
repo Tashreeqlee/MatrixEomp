@@ -66,13 +66,15 @@ const products = [
   {
     id: 10,
     name: "Polo Vivo 9N Mudflaps",
-    image: "https://i.postimg.cc/Df9C2Y5L/image-b7eb3ec0-5353-47bb-a066-99479b6da577.webp",
+    image:
+      "https://i.postimg.cc/Df9C2Y5L/image-b7eb3ec0-5353-47bb-a066-99479b6da577.webp",
     price: "250",
   },
   {
     id: 11,
     name: "VW Golf 6 GTI Mirror Caps",
-    image: "https://i.postimg.cc/d3P8Kgv0/image-24d89122-8c7c-4cbf-8e6b-48cbcc087758.webp",
+    image:
+      "https://i.postimg.cc/d3P8Kgv0/image-24d89122-8c7c-4cbf-8e6b-48cbcc087758.webp",
     price: "750",
   },
   {
@@ -160,7 +162,6 @@ function sortProductsByPrice() {
 let sortButton = document.getElementById("sortButton");
 sortButton.addEventListener("click", sortProductsByPrice);
 
-
 // Display loading spinner
 function displayLoadingSpinner() {
   const productsListDiv = document.getElementById("productsList");
@@ -190,14 +191,14 @@ function addToCart(productid) {
 
   // Update in localStorage
   localStorage.setItem("cart", JSON.stringify(cart));
-  alert('You have successfully added the item to cart')
+  alert("You have successfully added the item to cart");
 }
 
 //delete button
 function deleteProduct(id) {
   const index = checkoutData.findIndex((item) => item.id === id);
   checkoutData.splice(index, 1);
-  
+
   // Update local storage
   localStorage.setItem("cart", JSON.stringify(checkoutData));
   displayData();
