@@ -142,7 +142,7 @@ function addProduct() {
         new Date()
       )
     );
-    localStorage.setItem("product-list", JSON.stringify(productsData));
+    localStorage.setItem("products", JSON.stringify(productsData));
 
     clearForm();
     displayProducts();
@@ -152,18 +152,18 @@ function addProduct() {
   }
 }
 
-function product(idItem, name, img, price) {
+function product(idItem, name, image, price) {
   this.id = idItem;
   this.name = name;
-  this.image = img;
+  this.image = image;
   this.price = price;
 }
 
 function clearForm() {
-  prodName.value = "";
   prodId.value = "";
-  prodPrice.value = "";
+  prodName.value = "";
   image.value = "";
+  prodPrice.value = "";
 }
 
 function displayProducts() {
@@ -211,7 +211,7 @@ function deleteProduct(productId) {
   let index = productsData.findIndex((item) => item.id === productId);
   if (index !== -1) {
     productsData.splice(index, 1);
-    localStorage.setItem("product-list", JSON.stringify(productsData));
+    localStorage.setItem("products", JSON.stringify(productsData));
     displayProducts();
   }
 }
@@ -223,7 +223,7 @@ function editProduct(productId) {
     itemId = product.id;
     prodName.value = product.name;
     image.value = product.image;
-    prodId.value = product.description;
+    prodId.value = product.id;
     prodPrice.value = product.price;
     addProductModal.show();
   }
