@@ -141,7 +141,6 @@ function addProduct() {
         image.value,
         prodId.value,
         prodPrice.value,
-        new Date()
       )
     );
     localStorage.setItem("products", JSON.stringify(productsData));
