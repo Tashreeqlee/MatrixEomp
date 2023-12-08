@@ -231,7 +231,15 @@ function editProduct(productId) {
   }
 }
 
-//function to sort
+//function to sort items on admin page
+function sortProducts() {
+  productsData.sort((a, b) => a.name.localeCompare(b.name));
+  displayProducts();
+}
+
+let sortButton = document.getElementById("sortButton");
+sortButton.addEventListener("click", sortProducts);
+
 
 //close function for the modal
 function closeModal() {
