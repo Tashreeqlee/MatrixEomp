@@ -233,7 +233,7 @@ function editProduct(productId) {
 
 //function to sort items on admin page
 function sortProducts() {
-  productsData.sort((a, b) => a.name.localeCompare(b.name));
+  productsData.sort((a, b) => a.price.localeCompare(b.price));
   displayProducts();
 }
 
