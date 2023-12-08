@@ -10,7 +10,6 @@
 }
 body {
   font-family: "Nova Square", sans-serif;
-  /* background-color: lightgray; */
   background-image: url("https://iili.io/JztmB1f.md.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -68,7 +67,7 @@ footer {
   animation: spin 2s linear infinite;
   margin: 0 auto;
   width: 80px;
-  height: 80px
+  height: 80px;
 }
 
 @keyframes spin {
@@ -80,11 +79,10 @@ footer {
   }
 }
 
-table tbody tr td{
-    padding: 1vw;
-    border: 2px solid black;
+table tbody tr td {
+  padding: 1vw;
+  border: 2px solid black;
 }
-
 
 #contact {
   background: transparent;

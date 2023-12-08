@@ -1,2 +1,1 @@
-document.querySelector('#copyYear').textContent =
-new Date().getUTCFullYear()
+document.querySelector("#copyYear").textContent = new Date().getUTCFullYear();
