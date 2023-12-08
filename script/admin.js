@@ -221,7 +221,6 @@ function deleteProduct(productId) {
 function editProduct(productId) {
   let product = productsData.find((item) => item.id === productId);
   if (product) {
-    itemId = product.id;
     prodName.value = product.name;
     image.value = product.image;
     prodId.value = product.id;
