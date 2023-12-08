@@ -1,7 +1,7 @@
 // javascript for checkout page
 document.querySelector("#copyYear").textContent = new Date().getUTCFullYear();
 
-//
+//function for quantity display
 function handleQuantityChange(productId, quantity) {
   const productIndex = checkoutData.findIndex((item) => item.id === productId);
   checkoutData[productIndex].quantity = quantity;
@@ -10,6 +10,7 @@ function handleQuantityChange(productId, quantity) {
 
 
 //display data and total amount add up
+//Added the total amount display as well 
 let checkoutWrapper = document.querySelector("[checkout-products]");
 let checkoutData = JSON.parse(localStorage.getItem("cart"));
 
@@ -31,6 +32,7 @@ function displayData() {
             <td><button type="button" class="btn" onclick="deleteProduct()">Delete</button></td>
         </tr>
         </thead>
+        
         `;
     totalAmount += +item.price * item.quantity;
     addedProducts.push(item.id);
@@ -48,6 +50,11 @@ function deleteProduct(index) {
 
 displayData();
 
+
+//thank you for purchasing alert
+function showAlert() {
+  alert("Thank you for purchasing!!");
+}
 
 
 
