@@ -176,7 +176,7 @@ function displayProducts() {
     row.innerHTML = `
       <td>${item.id}</td>
       <td>${item.name}</td>
-      <td><img src="${item.image}" class="w-25 img-fluid" alt="${item.name}"></td>
+      <td><img src="${item.image}" class="img-fluid" alt="${item.name}"></td>
       <td>R${item.price}.00</td>
       <td>
         <button class="btn btn-primary editbtn" data-id="${item.id}">Edit</button>
