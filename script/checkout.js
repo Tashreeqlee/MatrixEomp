@@ -24,7 +24,7 @@ function displayData() {
         <thead>
         <tr>
             <td class="text-white">${item.name}</td>
-            <td><img src="${item.image}" class="w-25 img-fluid" alt="${item.name}"</td>
+            <td><img src="${item.image}" class="img-fluid" alt="${item.name}"</td>
             <td class="text-white">R${item.price}.00</td>
             <td><input type="number" min="1" value="${item.quantity}" onchange="handleQuantityChange(${item.id}, this.value)" placeholder="input quantity amount.."></td>
             <td><button type="button" class="btn" onclick="deleteProduct()">Delete</button></td>
