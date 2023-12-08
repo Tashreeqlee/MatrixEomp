@@ -156,7 +156,9 @@ function sortProductsByPrice() {
       return parseInt(a.price) - parseInt(b.price); //converts the price of each product to an integer using parseInt
     });
     displayProducts(sortedProducts);
-  } catch (e) {}
+  } catch (e) {
+    
+  }
 }
 // Add event listener to the sort button
 let sortButton = document.getElementById("sortButton");
