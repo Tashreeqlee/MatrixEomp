@@ -99,3 +99,11 @@ table tbody tr td {
   width: 100%;
   margin-bottom: 5rem;
 }
+
+
+/*Instagram*/
+#logo1 {
+  width: 69px;
+  height: 69px;
+  transition: 0,3s;
+}
